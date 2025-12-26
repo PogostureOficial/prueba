@@ -5,7 +5,7 @@ async function runAgent() {
 
   log.textContent = "Ejecutando agente...\n";
 
-  const res = await fetch("/api/run-agent", {
+  const res = await fetch("/api/run-agent.py", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ task })
@@ -28,3 +28,4 @@ async function runAgent() {
     i++;
   }, 800);
 }
+
